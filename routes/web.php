@@ -34,7 +34,7 @@ Route::group(['prefix' => 'dashboard', 'as' => 'dashboard.', 'middleware' => ['a
     // Customers
     Route::get('/customers', [App\Http\Controllers\ContactController::class, 'index'])->name('contacts');
     Route::post('/customers/create', [App\Http\Controllers\ContactController::class, 'createAccount'])->name('account.create');
-    Route::get('/customers/view/{email}', [App\Http\Controllers\ContactController::class, 'view'])->name('account.view');
+    Route::get('/customers/view/{id}', [App\Http\Controllers\ContactController::class, 'view'])->name('account.view');
 });
 
 require __DIR__.'/auth.php';
